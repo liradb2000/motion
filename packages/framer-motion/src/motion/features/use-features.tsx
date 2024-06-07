@@ -46,7 +46,7 @@ export function useFeatures(
          * dynamically request functionality. In initial tests this
          * was producing a lot of duplication amongst bundles.
          */
-        if (isEnabled(props) && Component) {
+        if (Component && isEnabled(props)) {
             features.push(
                 <Component
                     key={name}
